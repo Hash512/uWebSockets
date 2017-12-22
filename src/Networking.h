@@ -10,7 +10,7 @@
 #define SSL_up_ref(x) x->references++
 #endif
 
-#ifndef __linux
+#if !defined(__linux) && !defined(__sun)
 #define MSG_NOSIGNAL 0
 #else
 #include <endian.h>
